@@ -1,4 +1,4 @@
-const UserModel = require('../models/userModel');
+const UserModel = require('../Models/userModel');
 const { sendOTPEmail } = require('../utils/email');
 const { generateOTP } = require('../utils/otp');
 const OTP_EXPIRY_MINUTES = 10;

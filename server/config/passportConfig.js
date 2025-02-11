@@ -4,7 +4,7 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 const AppleStrategy = require('passport-apple');
 const dotenv = require('dotenv')
 dotenv.config();
-const UserModel = require('../models/userModel');
+const UserModel = require('../Models/userModel');
 
 // Serialize and deserialize users
 passport.serializeUser((user, done) => {
