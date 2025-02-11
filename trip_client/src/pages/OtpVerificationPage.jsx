@@ -34,7 +34,7 @@ const OtpVerificationPage = () => {
     const otpValue = otp.join("");
 
     try {
-      const response = await axios.post("http://localhost:7000/api/user/verify-otp", { otp: otpValue });
+      const response = await axios.post("https://trip-planner-2lxk.onrender.com/api/user/verify-otp", { otp: otpValue });
       setSuccess(response.data.message);
 
       // Redirect based on role

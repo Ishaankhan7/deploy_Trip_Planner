@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie";
+
 
 axios.defaults.withCredentials = true;
 
@@ -23,7 +23,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7000/api/user/signin",
+        "https://trip-planner-2lxk.onrender.com/api/user/signin",
         formData,
         { withCredentials: true }
       );

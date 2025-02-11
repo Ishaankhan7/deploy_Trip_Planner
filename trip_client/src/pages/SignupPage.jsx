@@ -28,7 +28,7 @@ const SignupPage = () => {
     setSuccess("");
 
     try {
-      const response = await axios.post("http://localhost:7000/api/user/signup", formData);
+      const response = await axios.post("https://trip-planner-2lxk.onrender.com/api/user/signup", formData);
       setSuccess(response.data.message);
       
       // Redirect to OTP verification page

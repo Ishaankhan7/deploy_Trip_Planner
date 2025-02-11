@@ -28,14 +28,14 @@ const _dirname = path.resolve();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Allow frontend requests
+    origin: "https://trip-planner-2lxk.onrender.com", // Allow frontend requests
     credentials: true,
   },
 });
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://trip-planner-2lxk.onrender.com",
   credentials: true,
 }));
 

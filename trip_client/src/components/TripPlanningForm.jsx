@@ -43,7 +43,7 @@
       delete requestData.startDate; // Remove the original camelCase keys
       delete requestData.endDate;
   
-      const response = await fetch("http://localhost:7000/api/trip-planner", {
+      const response = await fetch("https://trip-planner-2lxk.onrender.com/api/trip-planner", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Axios from 'axios';
 import Navbar_EmergencyPage from '../components/Navbar_EmergencyPage';
 import Footer from '../components/Footer';
-import Cookies from "js-cookie";
+
 
 function EmergencyPage() {
     const [message, setMessage] = useState('');
@@ -22,7 +22,7 @@ function EmergencyPage() {
             }
     
             const response = await Axios.post(
-                'http://localhost:7000/health-suggestions',
+                'https://trip-planner-2lxk.onrender.com/health-suggestions',
                 { healthCondition: message, location },
                 { 
                     headers: { Authorization: `Bearer ${token}` }, 
