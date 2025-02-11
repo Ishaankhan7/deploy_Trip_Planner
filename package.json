@@ -25,13 +25,15 @@
     "passport-apple": "^2.0.2",
     "passport-facebook": "^3.0.0",
     "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
   },
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "build": "yarn install && yarn install --prefix trip_client && cd trip_client && yarn build"
   }
 }

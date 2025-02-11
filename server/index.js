@@ -17,9 +17,12 @@ const chatRoomRoutes = require("./Routes/chatRoomRoutes");
 const ChatRoomModel = require("./Models/ChatRoomModel"); // Chat Room model
 const tripPlanRoutes = require("./Routes/tripPlanRoutes");
 const chatBotRoutes = require("./Routes/chatbotRoutes");
+const path = require("path");
 
 dotenv.config();
 const port = process.env.PORT;
+const _dirname = path.resolve();
+
 
 // Create HTTP server
 const server = http.createServer(app);
@@ -118,6 +121,13 @@ io.on("connection", (socket) => {
   res.send("Disconnected");
   });
 });
+
+
+//frontend file serve
+app.use(express.static(path.join(_dirname, "/trip_client/dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(_dirname, "trip_client", "dist", "index.html"));
+}); 
 
 // Start the server
 server.listen(port, () => {
