@@ -1,4 +1,4 @@
-const TimeSlotModel = require('../Models/timeslotModel');
+const TimeSlotModel = require('../Models/timeSlotModel');
 const ChatRoomModel = require("../Models/ChatRoomModel");
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
