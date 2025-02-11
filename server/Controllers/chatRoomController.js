@@ -1,4 +1,4 @@
-const ChatRoomModel = require("../Models/ChatRoomModel");
+const ChatRoomModel = require("../Models/chatRoomModel");
 
 exports.getMessages = async (req, res) => {
   try {

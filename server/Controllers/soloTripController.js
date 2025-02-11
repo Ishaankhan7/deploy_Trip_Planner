@@ -1,6 +1,6 @@
 const Itinerary = require('../Models/itineraryModel');
 const PartnerPreference = require('../Models/PartnerPreferenceModel');
-const ChatRoom = require('../Models/ChatRoomModel'); // Added for chat room functionality
+const ChatRoom = require('../Models/chatRoomModel'); // Added for chat room functionality
 
 exports.soloTrip = async (req, res) => {
     try {
