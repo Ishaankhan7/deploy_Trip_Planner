@@ -1,5 +1,5 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const HealthModel = require('../models/healthModel');
+const HealthModel = require('../Models/healthModel');
 const jwt = require('jsonwebtoken');
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY); 
