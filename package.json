@@ -34,7 +34,6 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "dev": "nodemon server/index.js",
-    "build": "yarn install && yarn install --prefix trip_client && cd trip_client && yarn install --frozen-lockfile && npx vite build"
-
+    "build": "yarn install --frozen-lockfile && cd trip_client && yarn install --frozen-lockfile && yarn build"
   }
 }
