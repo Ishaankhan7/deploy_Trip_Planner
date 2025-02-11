@@ -62,7 +62,7 @@ app.use((err, req, res, next) => {
 
 // WebSocket for real-time chat
 io.on("connection", (socket) => {
-  console.log("🔌 A user connected:", socket.id);
+ res.send("Connected");
 
   // Join a chat room
   socket.on("joinRoom", async ({ chatRoomId, userId }) => {
@@ -83,7 +83,6 @@ io.on("connection", (socket) => {
       }
 
       socket.join(chatRoomId);
-      console.log(`✅ User ${userId} joined chat room ${chatRoomId}`);
 
       // Send previous messages to the user when they join
       socket.emit("previousMessages", chatRoom.messages);
@@ -116,7 +115,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log("❌ A user disconnected:", socket.id);
+  res.send("Disconnected");
   });
 });
 

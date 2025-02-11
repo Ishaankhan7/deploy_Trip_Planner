@@ -9,12 +9,10 @@ const chatBot = async (req, res) => {
       return res.status(400).json({ error: "Message is required" });
     }
 
-    // Log the request for debugging
-    console.log(`Sending request to Python API: ${PYTHON_API_URL}`);
     
     const response = await axios.post(PYTHON_API_URL, { message: userMessage });
 
-    // console.log("Python API Response:", response.data); // Log response
+   
 
     res.json(response.data);
   } catch (error) {
